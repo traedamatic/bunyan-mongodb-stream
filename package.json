@@ -1,0 +1,25 @@
+{
+  "name": "bunyan-mongodb-stream",
+  "version": "0.0.1",
+  "description": "A database stream for mongoose to save all logs into a mongodb instance",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -r tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:traedamatic/bunyan-mongodb-stream.git"
+  },
+  "keywords": [
+    "MongoDb",
+    "Bunyan",
+    "Stream",
+    "Mongoose"
+  ],
+  "author": "Nicolas Traeder <traeder@codebility.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/traedamatic/bunyan-mongodb-stream/issues"
+  },
+  "homepage": "https://github.com/traedamatic/bunyan-mongodb-stream"
+}
