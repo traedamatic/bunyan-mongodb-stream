@@ -13,9 +13,10 @@ npm install bunyan-mongodb-stream
  
 # How To
 
-1. First to need to create a mongoose model. The package does not include a default model because the schema of the log-entry model.
+1. Install the npm bunyan-mongodb-stream package. ;)
+2. First to need to create a mongoose model. The package does not include a default model because the schema of the log-entry model.
 
-## Example
+**Example Model**
 
 ```javascript
 
@@ -51,11 +52,33 @@ var LogEntrySchema = new mongoose.Schema({
     }
 });
 
-module.exports = mongoose.model('Log', LogEntrySchema);
+var LogEntryModel = mongoose.model('Log', LogEntrySchema);
+```
+2. Require and initialize the bunyan-mongodb-stream package.
 
+```javascript
+var LogEntryStream = require('bunyan-mongodb-stream')({model: LogEntryModel});
+```
+
+3. Set up the bunyan logger
+
+```javascript
+
+var bunyan = require('bunyan');
+
+var logger = bunyan.createLogger({
+    name: 'YourLogger',
+    streams: [
+        {
+            stream: LogEntryStream
+        }
+    ],
+    serializers: bunyan.stdSerializers
+});
 
 ```
 
+4. Use the logger as you already known.
 
 
  
