@@ -1,6 +1,6 @@
 {
   "name": "bunyan-mongodb-stream",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A database stream for mongoose to save all logs into a mongodb instance",
   "main": "index.js",
   "scripts": {
