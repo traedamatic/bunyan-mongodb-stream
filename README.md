@@ -54,13 +54,13 @@ var LogEntrySchema = new mongoose.Schema({
 
 var LogEntryModel = mongoose.model('Log', LogEntrySchema);
 ```
-2. Require and initialize the bunyan-mongodb-stream package.
+3. Require and initialize the bunyan-mongodb-stream package.
 
 ```javascript
 var LogEntryStream = require('bunyan-mongodb-stream')({model: LogEntryModel});
 ```
 
-3. Set up the bunyan logger
+4. Set up the bunyan logger
 
 ```javascript
 
@@ -78,7 +78,7 @@ var logger = bunyan.createLogger({
 
 ```
 
-4. Use the logger as you already known.
+5. Use the logger as you already known.
 
 
  
