@@ -10,11 +10,19 @@ The implementation requires a mongoose model for saving the log-data in the mong
 ```
 npm install bunyan-mongodb-stream
 ```
- 
+or
+
+```
+npm install bunyan-mongodb-stream --save
+```
+
 # How To
 
-1. Install the npm bunyan-mongodb-stream package. ;)
-2. First to need to create a mongoose model. The package does not include a default model because the schema of the log-entry model.
+* Install the npm bunyan-mongodb-stream package. ;)
+* First to need to create a mongoose model. The package does not include a default model because the schema of the log-entry model. 
+You can add customer fields to mongodb document, just add the field to the schema and pass it to the bunyan logger. More information 
+custom fields look here: https://github.com/trentm/node-bunyan#log-method-api
+
 
 **Example Model**
 
@@ -54,13 +62,13 @@ var LogEntrySchema = new mongoose.Schema({
 
 var LogEntryModel = mongoose.model('Log', LogEntrySchema);
 ```
-3. Require and initialize the bunyan-mongodb-stream package.
+* Require and initialize the bunyan-mongodb-stream package.
 
 ```javascript
 var LogEntryStream = require('bunyan-mongodb-stream')({model: LogEntryModel});
 ```
 
-4. Set up the bunyan logger
+* Set up the bunyan logger
 
 ```javascript
 
@@ -78,7 +86,10 @@ var logger = bunyan.createLogger({
 
 ```
 
-5. Use the logger as you already known.
+* Use the logger as you already do.
 
+# Further Reading
+
+For more details about the bunyan logger go to the github account: https://github.com/trentm/node-bunyan
 
  
