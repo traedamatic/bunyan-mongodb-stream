@@ -1,5 +1,7 @@
 # Bunyan MongoDB Stream
 
+[![Build Status](https://travis-ci.org/traedamatic/bunyan-mongodb-stream.svg?branch=master)](https://travis-ci.org/traedamatic/bunyan-mongodb-stream)
+
 A stream implementation for the bunyan logger (https://github.com/trentm/node-bunyan). All log entries will be saved directly to your mongodb
 instance. It is a very lower level implementation and has no external dependencies.
 
